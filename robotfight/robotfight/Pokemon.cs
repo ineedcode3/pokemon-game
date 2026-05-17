@@ -20,6 +20,10 @@ namespace robotfight
             m3 = mo3;
             m4 = mo4;
         }
+        public void setHealth(int set)
+        {
+            health = set;
+        }
         public int getHealth() { return health; }
         public String getName() { return name; }
 

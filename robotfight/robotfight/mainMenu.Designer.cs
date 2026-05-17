@@ -55,6 +55,7 @@
             label1.Size = new Size(601, 106);
             label1.TabIndex = 1;
             label1.Text = "Pokemon Battle";
+            label1.Click += label1_Click;
             // 
             // b1
             // 

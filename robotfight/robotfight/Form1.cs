@@ -24,7 +24,6 @@ namespace robotfight
             {
                 label1.Text = "Oof you lost to a computer. You are trash";
             }
-         
         }
 
         private void button1_Click(object sender, EventArgs e)

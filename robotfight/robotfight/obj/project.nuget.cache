@@ -1,8 +1,16 @@
 {
   "version": 2,
-  "dgSpecHash": "fZpFNNXiPEs0iHxOFyIrdvCDfUReMb0qiJBbjRe0Fkkno1N4ovnFXgYeKUvX/iM8ggfOyn4QoJaYFwvtNlQOTA==",
+  "dgSpecHash": "PNOY5Ta3L9EFdMb9P83QH5D+UsNxKj12md0z+FSYhmE1zQC5aSotKLeY0ml/fDn3nO/BeRqRrzhHGjF3YhVJyA==",
   "success": true,
   "projectFilePath": "C:\\projects\\pokemon-game\\robotfight\\robotfight\\robotfight.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\isaac\\.nuget\\packages\\naudio\\2.3.0\\naudio.2.3.0.nupkg.sha512",
+    "C:\\Users\\isaac\\.nuget\\packages\\naudio.asio\\2.3.0\\naudio.asio.2.3.0.nupkg.sha512",
+    "C:\\Users\\isaac\\.nuget\\packages\\naudio.core\\2.3.0\\naudio.core.2.3.0.nupkg.sha512",
+    "C:\\Users\\isaac\\.nuget\\packages\\naudio.midi\\2.3.0\\naudio.midi.2.3.0.nupkg.sha512",
+    "C:\\Users\\isaac\\.nuget\\packages\\naudio.wasapi\\2.3.0\\naudio.wasapi.2.3.0.nupkg.sha512",
+    "C:\\Users\\isaac\\.nuget\\packages\\naudio.winforms\\2.3.0\\naudio.winforms.2.3.0.nupkg.sha512",
+    "C:\\Users\\isaac\\.nuget\\packages\\naudio.winmm\\2.3.0\\naudio.winmm.2.3.0.nupkg.sha512"
+  ],
   "logs": []
 }

@@ -19,7 +19,7 @@ namespace robotfight
         public GameManager(Pokemon poke)
         {
             this.poke = poke;
-            enemy = pokemonDB.Charmander;
+            enemy = pokemonDB.Bulbasaur;
             enemyHealth = enemy.getHealth();
         }
         public void playerAttack(int move)
@@ -98,7 +98,14 @@ namespace robotfight
         {
             playerTurn = a;
         }
-        public int getEnemy() { return enemyHealth; }
+        public int getEnemy() 
+        {
+            if(enemyHealth <= 0)
+            {
+                return 0;
+            }
+            return enemyHealth; 
+        }
         public String getEnemyName() { return enemy.getName(); }
         public int getPlayer() { return poke.getHealth(); }
         public Boolean getwin() { return win; }

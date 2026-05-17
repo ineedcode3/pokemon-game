@@ -133,14 +133,50 @@
   <data name="charmanderf" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\charmanderf.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="dratini" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\dratini.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="dratinif" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\dratinif.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="eevee" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\eevee.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="eeveef" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\eeveef.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="forest" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\forest.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="hit_effect_removebg_preview" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\hit_effect-removebg-preview.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="meowth" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\meowth-removebg-preview.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="onix" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\onix.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="onixf" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\onixf.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="pikachu" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pikcachu.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="pikachuf" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pikachuf.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="riolu" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\riolu.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="rioluf" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\rioluf.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="squirtle" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\squirtle.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="squirtlef" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\squirtlef.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="vineboom" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\vineboom.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>

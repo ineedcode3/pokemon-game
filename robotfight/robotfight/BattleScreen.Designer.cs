@@ -1,6 +1,6 @@
 ﻿namespace robotfight
 {
-    partial class BattleScreen
+    partial class battleScreen
     {
         /// <summary>
         ///  Required designer variable.
@@ -43,18 +43,23 @@
             pictureBox4 = new PictureBox();
             InfoText = new Label();
             playerBar = new ProgressBar();
+            enemyBar = new ProgressBar();
+            playerEffect = new PictureBox();
+            enemyEffect = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)playerImage).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)EnemyImage).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)playerEffect).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)enemyEffect).BeginInit();
             SuspendLayout();
             // 
             // playerImage
             // 
             playerImage.BackColor = Color.Transparent;
             playerImage.Image = Properties.Resources.pikachu;
-            playerImage.Location = new Point(47, 93);
+            playerImage.Location = new Point(137, 134);
             playerImage.Name = "playerImage";
             playerImage.Size = new Size(322, 304);
             playerImage.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -113,14 +118,14 @@
             // 
             // EnemyImage
             // 
-            EnemyImage.BackgroundImageLayout = ImageLayout.None;
             EnemyImage.Image = Properties.Resources.meowth;
-            EnemyImage.Location = new Point(508, 60);
+            EnemyImage.Location = new Point(554, 122);
             EnemyImage.Name = "EnemyImage";
             EnemyImage.Size = new Size(154, 151);
             EnemyImage.SizeMode = PictureBoxSizeMode.StretchImage;
             EnemyImage.TabIndex = 7;
             EnemyImage.TabStop = false;
+            EnemyImage.Click += EnemyImage_Click;
             // 
             // pictureBox3
             // 
@@ -137,7 +142,7 @@
             PlayerNameTag.AutoSize = true;
             PlayerNameTag.BackColor = Color.LightGray;
             PlayerNameTag.Font = new Font("Gadugi", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            PlayerNameTag.Location = new Point(495, 252);
+            PlayerNameTag.Location = new Point(495, 243);
             PlayerNameTag.Name = "PlayerNameTag";
             PlayerNameTag.Size = new Size(111, 33);
             PlayerNameTag.TabIndex = 11;
@@ -164,7 +169,7 @@
             EnemyNameTag.AutoSize = true;
             EnemyNameTag.BackColor = Color.LightGray;
             EnemyNameTag.Font = new Font("Gadugi", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            EnemyNameTag.Location = new Point(56, 82);
+            EnemyNameTag.Location = new Point(22, 70);
             EnemyNameTag.Name = "EnemyNameTag";
             EnemyNameTag.Size = new Size(116, 33);
             EnemyNameTag.TabIndex = 14;
@@ -176,7 +181,7 @@
             EnemyHealth.BackColor = Color.LightGray;
             EnemyHealth.BorderStyle = BorderStyle.FixedSingle;
             EnemyHealth.Font = new Font("Gadugi", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            EnemyHealth.Location = new Point(244, 82);
+            EnemyHealth.Location = new Point(243, 70);
             EnemyHealth.Name = "EnemyHealth";
             EnemyHealth.Size = new Size(94, 35);
             EnemyHealth.TabIndex = 13;
@@ -196,11 +201,11 @@
             // 
             InfoText.BorderStyle = BorderStyle.FixedSingle;
             InfoText.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            InfoText.Location = new Point(22, 334);
+            InfoText.Location = new Point(21, 328);
             InfoText.Name = "InfoText";
-            InfoText.Size = new Size(362, 94);
+            InfoText.Size = new Size(347, 104);
             InfoText.TabIndex = 15;
-            InfoText.Text = "A meowth has appeared to battle you!";
+            InfoText.Text = "A meowth has appeared to battle you! why is it not typing the third line???";
             // 
             // playerBar
             // 
@@ -212,11 +217,49 @@
             playerBar.TabIndex = 16;
             playerBar.Value = 100;
             // 
-            // BattleScreen
+            // enemyBar
+            // 
+            enemyBar.ForeColor = Color.FromArgb(128, 255, 128);
+            enemyBar.Location = new Point(174, 108);
+            enemyBar.Name = "enemyBar";
+            enemyBar.Size = new Size(163, 16);
+            enemyBar.Step = 1;
+            enemyBar.TabIndex = 17;
+            enemyBar.Value = 100;
+            // 
+            // playerEffect
+            // 
+            playerEffect.BackColor = Color.Transparent;
+            playerEffect.Image = Properties.Resources.hit_effect_removebg_preview;
+            playerEffect.Location = new Point(330, 168);
+            playerEffect.Name = "playerEffect";
+            playerEffect.Size = new Size(93, 87);
+            playerEffect.SizeMode = PictureBoxSizeMode.StretchImage;
+            playerEffect.TabIndex = 18;
+            playerEffect.TabStop = false;
+            playerEffect.Visible = false;
+            // 
+            // enemyEffect
+            // 
+            enemyEffect.BackColor = Color.Transparent;
+            enemyEffect.Image = Properties.Resources.hit_effect_removebg_preview;
+            enemyEffect.Location = new Point(485, 98);
+            enemyEffect.Name = "enemyEffect";
+            enemyEffect.Size = new Size(93, 87);
+            enemyEffect.SizeMode = PictureBoxSizeMode.StretchImage;
+            enemyEffect.TabIndex = 19;
+            enemyEffect.TabStop = false;
+            enemyEffect.Visible = false;
+            // 
+            // battleScreen
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackgroundImage = Properties.Resources.forest;
             ClientSize = new Size(800, 450);
+            Controls.Add(enemyEffect);
+            Controls.Add(playerEffect);
+            Controls.Add(enemyBar);
             Controls.Add(HealthPlayer);
             Controls.Add(playerBar);
             Controls.Add(InfoText);
@@ -236,7 +279,7 @@
             MaximumSize = new Size(818, 497);
             MinimizeBox = false;
             MinimumSize = new Size(818, 497);
-            Name = "BattleScreen";
+            Name = "battleScreen";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "PokemonBattles";
             FormClosing += BattleScreen_FormClosing;
@@ -245,6 +288,8 @@
             ((System.ComponentModel.ISupportInitialize)EnemyImage).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
+            ((System.ComponentModel.ISupportInitialize)playerEffect).EndInit();
+            ((System.ComponentModel.ISupportInitialize)enemyEffect).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -266,5 +311,8 @@
         private PictureBox pictureBox4;
         private Label InfoText;
         private ProgressBar playerBar;
+        private ProgressBar enemyBar;
+        private PictureBox playerEffect;
+        private PictureBox enemyEffect;
     }
 }

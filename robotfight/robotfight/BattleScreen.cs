@@ -7,9 +7,9 @@ using NAudio.Wave;
 
 namespace robotfight
 {
-    public partial class BattleScreen : Form
+    public partial class battleScreen : Form
     {
-        
+
         Random rand = new Random();
         GameManager game;
         public Boolean win;
@@ -18,11 +18,14 @@ namespace robotfight
         private Pokemon poke;
         Sounds sound = new Sounds();
         public int score;
-        public BattleScreen(String Name, Pokemon poke)
+        public battleScreen(String Name, Pokemon poke)
         {
             InitializeComponent();
+            EnemyImage.Parent = this;
+            EnemyImage.BackColor = Color.Transparent;
             playerBar.Maximum = poke.getHealth();
             game = new GameManager(poke);
+            enemyBar.Maximum = game.getEnemy();
             name = Name;
             this.poke = poke;
             PlayerNameTag.Text = poke.getName();
@@ -35,7 +38,8 @@ namespace robotfight
         }
         public void updateEnemy()
         {
-            EnemyNameTag.Text=game.getEnemyName();
+            enemyBar.Value = game.getEnemy();
+            EnemyNameTag.Text = game.getEnemyName();
             EnemyImage.Image = PokemonImageDatabase.Front[game.getEnemyName()];
         }
         private async void startText()
@@ -66,7 +70,7 @@ namespace robotfight
             {
                 game.playerAttack(3);
                 updateEnemyHealth();
-                await printSlow("You used " + poke.m3.getName()+". You dealt "+poke.m3.getDamage()+" damage.");                
+                await printSlow("You used " + poke.m3.getName() + ". You dealt " + poke.m3.getDamage() + " damage.");
             }
         }
         private async void button4_Click(object sender, EventArgs e)
@@ -87,7 +91,7 @@ namespace robotfight
         }
         public async void enemyTurn()
         {
-            if(!game.getwin())
+            if (!game.getwin())
             {
                 await Task.Delay(2000);
                 int move = rand.Next(1, 5);
@@ -121,15 +125,22 @@ namespace robotfight
         {
             updateHealth();
             sound.PlayVineBoom();
-            await printSlow("The enemy "+game.getEnemyName()+" has used " + attackname + ". You took " + damage + " damage");
+            await playerAnim();
             updateHealth();
+            await printSlow("The enemy " + game.getEnemyName() + " has used " + attackname + ". You took " + damage + " damage");
         }
-        public void updateEnemyHealth()
+        public async void updateEnemyHealth()
         {
             EnemyHealth.Text = game.getEnemy() + "hp";
-            checkWin();
             sound.PlayVineBoom();
-            if(!game.getwin())
+            await enemyAnim();
+            while (enemyBar.Value > game.getEnemy())
+            {
+                enemyBar.Value -= 1; // smaller step = smoother animation
+                await Task.Delay(10); // controls speed
+            }
+            checkWin();
+            if (!game.getwin())
             {
                 enemyTurn();
             }
@@ -142,20 +153,20 @@ namespace robotfight
         public async void enemyDamage(int dmg)
         {
             sound.PlayVineBoom();
-            updateHealth();
             await enemyAnim();
+            updateHealth();
             checkWin();
         }
         public void checkWin()
         {
-            if(game.checkWin()==0)
-            { 
+            if (game.checkWin() == 0)
+            {
                 Form1 form1 = new Form1(true);
                 form1.Show();
                 this.Hide();
                 win = true;
             }
-            if(game.checkWin()==1)
+            if (game.checkWin() == 1)
             {
                 Form1 form1 = new Form1(false);
                 form1.Show();
@@ -163,28 +174,21 @@ namespace robotfight
                 win = true;
             }
         }
+        public async Task playerAnim()
+        {
+            playerEffect.Visible = true;
+            await Task.Delay(500);
+            playerEffect.Visible = false;
+        }
         public async Task enemyAnim()
         {
-            EnemyImage.Location = new Point(EnemyImage.Location.X + 10, EnemyImage.Location.Y - 10);
-            await Task.Delay(100);
-            EnemyImage.Location = new Point(EnemyImage.Location.X - 10, EnemyImage.Location.Y + 10);
-            await Task.Delay(100);
-            EnemyImage.Location = new Point(EnemyImage.Location.X + 10, EnemyImage.Location.Y - 10);
-            await Task.Delay(100);
-            EnemyImage.Location = new Point(EnemyImage.Location.X - 10, EnemyImage.Location.Y + 10);
-            await Task.Delay(100);
-            EnemyImage.Location = new Point(EnemyImage.Location.X + 10, EnemyImage.Location.Y - 10);
-            await Task.Delay(100);
-            EnemyImage.Location = new Point(EnemyImage.Location.X - 10, EnemyImage.Location.Y + 10);
-            await Task.Delay(100);
-            EnemyImage.Location = new Point(EnemyImage.Location.X + 10, EnemyImage.Location.Y - 10);
-            await Task.Delay(100);
-            EnemyImage.Location = new Point(EnemyImage.Location.X - 10, EnemyImage.Location.Y + 10);
-            await Task.Delay(100);
+            enemyEffect.Visible = true;
+            await Task.Delay(500);
+            enemyEffect.Visible = false;
         }
         public void updateHealth()
         {
-            HealthPlayer.Text = game.getPlayer()+"hp";
+            HealthPlayer.Text = game.getPlayer() + "hp";
             AnimateHealthBar();
             Application.DoEvents();
         }
@@ -207,6 +211,10 @@ namespace robotfight
                 await Task.Delay(50); // waits without freezing UI
             }
         }
-        
+
+        private void EnemyImage_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

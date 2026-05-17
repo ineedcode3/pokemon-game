@@ -1,46 +1,16 @@
-C:\Users\isaac\Downloads\coding-main\coding-main\robofight redooo\robotfight\robotfight\bin\Debug\net8.0-windows\robotfight.exe
-C:\Users\isaac\Downloads\coding-main\coding-main\robofight redooo\robotfight\robotfight\bin\Debug\net8.0-windows\robotfight.deps.json
-C:\Users\isaac\Downloads\coding-main\coding-main\robofight redooo\robotfight\robotfight\bin\Debug\net8.0-windows\robotfight.runtimeconfig.json
-C:\Users\isaac\Downloads\coding-main\coding-main\robofight redooo\robotfight\robotfight\bin\Debug\net8.0-windows\robotfight.dll
-C:\Users\isaac\Downloads\coding-main\coding-main\robofight redooo\robotfight\robotfight\bin\Debug\net8.0-windows\robotfight.pdb
-C:\Users\isaac\Downloads\coding-main\coding-main\robofight redooo\robotfight\robotfight\obj\Debug\net8.0-windows\robotfight.csproj.GenerateResource.cache
-C:\Users\isaac\Downloads\coding-main\coding-main\robofight redooo\robotfight\robotfight\obj\Debug\net8.0-windows\robotfight.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\isaac\Downloads\coding-main\coding-main\robofight redooo\robotfight\robotfight\obj\Debug\net8.0-windows\robotfight.AssemblyInfoInputs.cache
-C:\Users\isaac\Downloads\coding-main\coding-main\robofight redooo\robotfight\robotfight\obj\Debug\net8.0-windows\robotfight.AssemblyInfo.cs
-C:\Users\isaac\Downloads\coding-main\coding-main\robofight redooo\robotfight\robotfight\obj\Debug\net8.0-windows\robotfight.csproj.CoreCompileInputs.cache
-C:\Users\isaac\Downloads\coding-main\coding-main\robofight redooo\robotfight\robotfight\obj\Debug\net8.0-windows\robotfight.dll
-C:\Users\isaac\Downloads\coding-main\coding-main\robofight redooo\robotfight\robotfight\obj\Debug\net8.0-windows\refint\robotfight.dll
-C:\Users\isaac\Downloads\coding-main\coding-main\robofight redooo\robotfight\robotfight\obj\Debug\net8.0-windows\robotfight.pdb
-C:\Users\isaac\Downloads\coding-main\coding-main\robofight redooo\robotfight\robotfight\obj\Debug\net8.0-windows\robotfight.genruntimeconfig.cache
-C:\Users\isaac\Downloads\coding-main\coding-main\robofight redooo\robotfight\robotfight\obj\Debug\net8.0-windows\ref\robotfight.dll
-C:\Users\isaac\Downloads\coding-main\coding-main\robofight redooo\robotfight\robotfight\obj\Debug\net8.0-windows\robotfight.Properties.Resources.resources
-C:\Users\isaac\Downloads\coding-main\coding-main\robofight redooo\robotfight\robotfight\obj\Debug\net8.0-windows\robotfight.BattleScreen.resources
-C:\Users\isaac\Downloads\coding-main\coding-main\robofight redooo\robotfight\robotfight\obj\Debug\net8.0-windows\robotfight.mainMenu.resources
-C:\Users\isaac\OneDrive\coding\pokemon game\robotfight\robotfight\bin\Debug\net8.0-windows\robotfight.exe
-C:\Users\isaac\OneDrive\coding\pokemon game\robotfight\robotfight\bin\Debug\net8.0-windows\robotfight.deps.json
-C:\Users\isaac\OneDrive\coding\pokemon game\robotfight\robotfight\bin\Debug\net8.0-windows\robotfight.runtimeconfig.json
-C:\Users\isaac\OneDrive\coding\pokemon game\robotfight\robotfight\bin\Debug\net8.0-windows\robotfight.dll
-C:\Users\isaac\OneDrive\coding\pokemon game\robotfight\robotfight\bin\Debug\net8.0-windows\robotfight.pdb
-C:\Users\isaac\OneDrive\coding\pokemon game\robotfight\robotfight\obj\Debug\net8.0-windows\robotfight.BattleScreen.resources
-C:\Users\isaac\OneDrive\coding\pokemon game\robotfight\robotfight\obj\Debug\net8.0-windows\robotfight.mainMenu.resources
-C:\Users\isaac\OneDrive\coding\pokemon game\robotfight\robotfight\obj\Debug\net8.0-windows\robotfight.Properties.Resources.resources
-C:\Users\isaac\OneDrive\coding\pokemon game\robotfight\robotfight\obj\Debug\net8.0-windows\robotfight.csproj.GenerateResource.cache
-C:\Users\isaac\OneDrive\coding\pokemon game\robotfight\robotfight\obj\Debug\net8.0-windows\robotfight.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\isaac\OneDrive\coding\pokemon game\robotfight\robotfight\obj\Debug\net8.0-windows\robotfight.AssemblyInfoInputs.cache
-C:\Users\isaac\OneDrive\coding\pokemon game\robotfight\robotfight\obj\Debug\net8.0-windows\robotfight.AssemblyInfo.cs
-C:\Users\isaac\OneDrive\coding\pokemon game\robotfight\robotfight\obj\Debug\net8.0-windows\robotfight.csproj.CoreCompileInputs.cache
-C:\Users\isaac\OneDrive\coding\pokemon game\robotfight\robotfight\obj\Debug\net8.0-windows\robotfight.sourcelink.json
-C:\Users\isaac\OneDrive\coding\pokemon game\robotfight\robotfight\obj\Debug\net8.0-windows\robotfight.dll
-C:\Users\isaac\OneDrive\coding\pokemon game\robotfight\robotfight\obj\Debug\net8.0-windows\refint\robotfight.dll
-C:\Users\isaac\OneDrive\coding\pokemon game\robotfight\robotfight\obj\Debug\net8.0-windows\robotfight.pdb
-C:\Users\isaac\OneDrive\coding\pokemon game\robotfight\robotfight\obj\Debug\net8.0-windows\robotfight.genruntimeconfig.cache
-C:\Users\isaac\OneDrive\coding\pokemon game\robotfight\robotfight\obj\Debug\net8.0-windows\ref\robotfight.dll
-C:\Users\isaac\OneDrive\coding\pokemon game\robotfight\robotfight\obj\Debug\net8.0-windows\robotfight.Form1.resources
 C:\projects\pokemon-game\robotfight\robotfight\bin\Debug\net8.0-windows\robotfight.exe
 C:\projects\pokemon-game\robotfight\robotfight\bin\Debug\net8.0-windows\robotfight.deps.json
 C:\projects\pokemon-game\robotfight\robotfight\bin\Debug\net8.0-windows\robotfight.runtimeconfig.json
 C:\projects\pokemon-game\robotfight\robotfight\bin\Debug\net8.0-windows\robotfight.dll
 C:\projects\pokemon-game\robotfight\robotfight\bin\Debug\net8.0-windows\robotfight.pdb
+C:\projects\pokemon-game\robotfight\robotfight\bin\Debug\net8.0-windows\NAudio.dll
+C:\projects\pokemon-game\robotfight\robotfight\bin\Debug\net8.0-windows\NAudio.Asio.dll
+C:\projects\pokemon-game\robotfight\robotfight\bin\Debug\net8.0-windows\NAudio.Core.dll
+C:\projects\pokemon-game\robotfight\robotfight\bin\Debug\net8.0-windows\NAudio.Midi.dll
+C:\projects\pokemon-game\robotfight\robotfight\bin\Debug\net8.0-windows\NAudio.Wasapi.dll
+C:\projects\pokemon-game\robotfight\robotfight\bin\Debug\net8.0-windows\NAudio.WinForms.dll
+C:\projects\pokemon-game\robotfight\robotfight\bin\Debug\net8.0-windows\NAudio.WinMM.dll
+C:\projects\pokemon-game\robotfight\robotfight\obj\Debug\net8.0-windows\robotfight.csproj.AssemblyReference.cache
 C:\projects\pokemon-game\robotfight\robotfight\obj\Debug\net8.0-windows\robotfight.BattleScreen.resources
 C:\projects\pokemon-game\robotfight\robotfight\obj\Debug\net8.0-windows\robotfight.Form1.resources
 C:\projects\pokemon-game\robotfight\robotfight\obj\Debug\net8.0-windows\robotfight.mainMenu.resources
@@ -51,17 +21,9 @@ C:\projects\pokemon-game\robotfight\robotfight\obj\Debug\net8.0-windows\robotfig
 C:\projects\pokemon-game\robotfight\robotfight\obj\Debug\net8.0-windows\robotfight.AssemblyInfo.cs
 C:\projects\pokemon-game\robotfight\robotfight\obj\Debug\net8.0-windows\robotfight.csproj.CoreCompileInputs.cache
 C:\projects\pokemon-game\robotfight\robotfight\obj\Debug\net8.0-windows\robotfight.sourcelink.json
+C:\projects\pokemon-game\robotfight\robotfight\obj\Debug\net8.0-windows\robotfight.csproj.CopyComplete
 C:\projects\pokemon-game\robotfight\robotfight\obj\Debug\net8.0-windows\robotfight.dll
 C:\projects\pokemon-game\robotfight\robotfight\obj\Debug\net8.0-windows\refint\robotfight.dll
 C:\projects\pokemon-game\robotfight\robotfight\obj\Debug\net8.0-windows\robotfight.pdb
 C:\projects\pokemon-game\robotfight\robotfight\obj\Debug\net8.0-windows\robotfight.genruntimeconfig.cache
 C:\projects\pokemon-game\robotfight\robotfight\obj\Debug\net8.0-windows\ref\robotfight.dll
-C:\projects\pokemon-game\robotfight\robotfight\bin\Debug\net8.0-windows\NAudio.dll
-C:\projects\pokemon-game\robotfight\robotfight\bin\Debug\net8.0-windows\NAudio.Asio.dll
-C:\projects\pokemon-game\robotfight\robotfight\bin\Debug\net8.0-windows\NAudio.Core.dll
-C:\projects\pokemon-game\robotfight\robotfight\bin\Debug\net8.0-windows\NAudio.Midi.dll
-C:\projects\pokemon-game\robotfight\robotfight\bin\Debug\net8.0-windows\NAudio.Wasapi.dll
-C:\projects\pokemon-game\robotfight\robotfight\bin\Debug\net8.0-windows\NAudio.WinForms.dll
-C:\projects\pokemon-game\robotfight\robotfight\bin\Debug\net8.0-windows\NAudio.WinMM.dll
-C:\projects\pokemon-game\robotfight\robotfight\obj\Debug\net8.0-windows\robotfight.csproj.AssemblyReference.cache
-C:\projects\pokemon-game\robotfight\robotfight\obj\Debug\net8.0-windows\robotfight.csproj.CopyComplete

@@ -23,30 +23,33 @@ namespace robotfight
 
         private void startBtn_Click(object sender, EventArgs e)
         {
-            startBtn.Visible = false;
-            pokemon = pokemonDrop.SelectedItem.ToString();
-            BattleScreen b = new BattleScreen("bob", pokemonDB.name[pokemon]);
-            b.Show();
-            this.Hide();
+            if(pokemonDrop.SelectedItem != null)
+            {
+                startBtn.Visible = false;
+                pokemon = pokemonDrop.SelectedItem.ToString();
+                battleScreen b = new battleScreen("bob", pokemonDB.name[pokemon]);
+                b.Show();
+                this.Hide();
+            }
         }
 
         private void b1_Click(object sender, EventArgs e)
         {
-            BattleScreen b = new BattleScreen("bob", pokemonDB.name[pokemon]);
+            battleScreen b = new battleScreen("bob", pokemonDB.name[pokemon]);
             //b.Show();
             //this.Hide();
         }
 
         private void b2_Click(object sender, EventArgs e)
         {
-            BattleScreen b = new BattleScreen("jake", pokemonDB.Charmander);
+            battleScreen b = new battleScreen("jake", pokemonDB.Charmander);
             //b.Show();
             //this.Hide();
         }
 
         private void b3_Click(object sender, EventArgs e)
         {
-            BattleScreen b = new BattleScreen("nathan", pokemonDB.Bulbasaur);
+            battleScreen b = new battleScreen("nathan", pokemonDB.Bulbasaur);
             //b.Show();
             //this.Hide();
         }

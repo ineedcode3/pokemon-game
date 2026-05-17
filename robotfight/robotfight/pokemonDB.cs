@@ -8,14 +8,15 @@ namespace robotfight
 {
     public static class pokemonDB
     {
+        // Fire starter
         public static Pokemon Charmander = new Pokemon(
-        "Charmander",
-        100,
-        MoveDatabase.Scratch,
-        MoveDatabase.Ember,
-        MoveDatabase.Tackle,
-        MoveDatabase.Growl
-    );
+            "Charmander",
+            100,
+            MoveDatabase.Scratch,
+            MoveDatabase.Ember,
+            MoveDatabase.Tackle,
+            MoveDatabase.QuickAttack
+        );
 
         // Water starter
         public static Pokemon Squirtle = new Pokemon(
@@ -24,7 +25,7 @@ namespace robotfight
             MoveDatabase.Tackle,
             MoveDatabase.WaterGun,
             MoveDatabase.BubbleBeam,
-            MoveDatabase.Growl
+            MoveDatabase.QuickAttack
         );
 
         // Grass starter
@@ -34,7 +35,7 @@ namespace robotfight
             MoveDatabase.VineWhip,
             MoveDatabase.RazorLeaf,
             MoveDatabase.Tackle,
-            MoveDatabase.LeechSeed
+            MoveDatabase.Scratch
         );
 
         // Electric starter
@@ -44,7 +45,7 @@ namespace robotfight
             MoveDatabase.ThunderShock,
             MoveDatabase.QuickAttack,
             MoveDatabase.Thunderbolt,
-            MoveDatabase.Growl
+            MoveDatabase.Tackle
         );
 
         // Dragon starter
@@ -60,11 +61,11 @@ namespace robotfight
         // Fighting type
         public static Pokemon Riolu = new Pokemon(
             "Riolu",
-            100,
+            130,
             MoveDatabase.AuraSphere,
             MoveDatabase.QuickAttack,
             MoveDatabase.Tackle,
-            MoveDatabase.Growl
+            MoveDatabase.Scratch
         );
 
         // Tank
@@ -73,18 +74,18 @@ namespace robotfight
             140,
             MoveDatabase.Tackle,
             MoveDatabase.DragonBreath,
-            MoveDatabase.Rest,
-            MoveDatabase.Growl
+            MoveDatabase.BubbleBeam,
+            MoveDatabase.RazorLeaf
         );
 
         // Normal
         public static Pokemon Eevee = new Pokemon(
             "Eevee",
-            100,
+            120,
             MoveDatabase.Tackle,
             MoveDatabase.QuickAttack,
-            MoveDatabase.Rest,
-            MoveDatabase.Growl
+            MoveDatabase.Scratch,
+            MoveDatabase.Ember
         );
         public static Dictionary<string, Pokemon> name = new Dictionary<string, Pokemon>
         {

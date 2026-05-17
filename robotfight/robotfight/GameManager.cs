@@ -70,18 +70,23 @@ namespace robotfight
             {
                 poke.setHealth(0);
             }
+            playerTurn = true;
         }
         public int checkWin()
         {
-            if(poke.getHealth() < 0)
+            if(poke.getHealth() <= 0)
             {
                 return 1;
             }
-            if (enemyHealth < 0)
+            if (enemyHealth <= 0)
             {
                 return 0;
             }
             else return -1;
+        }
+        public void setPlayerTurn(Boolean a)
+        {
+            playerTurn = a;
         }
         public int getEnemy() { return enemyHealth; }
         public int getPlayer() { return poke.getHealth(); }

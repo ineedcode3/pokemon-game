@@ -82,9 +82,29 @@ namespace robotfight.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap bulbasaurf {
+            get {
+                object obj = ResourceManager.GetObject("bulbasaurf", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap charmander {
             get {
                 object obj = ResourceManager.GetObject("charmander", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap charmanderf {
+            get {
+                object obj = ResourceManager.GetObject("charmanderf", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -105,6 +125,16 @@ namespace robotfight.Properties {
         internal static System.Drawing.Bitmap pikachu {
             get {
                 object obj = ResourceManager.GetObject("pikachu", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pikachuf {
+            get {
+                object obj = ResourceManager.GetObject("pikachuf", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

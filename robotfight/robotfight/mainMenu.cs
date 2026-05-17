@@ -13,7 +13,8 @@ namespace robotfight
     public partial class mainMenu : Form
     {
         Sounds sound = new Sounds();
-
+        String pokemon;
+        bool expand = false;
         public mainMenu()
         {
             InitializeComponent();
@@ -23,34 +24,39 @@ namespace robotfight
         private void startBtn_Click(object sender, EventArgs e)
         {
             startBtn.Visible = false;
-            l1.Visible = true;
-            b1.Visible = true;
-            b2.Visible = true;
-            b3.Visible = true;
+            pokemon = pokemonDrop.SelectedItem.ToString();
+            BattleScreen b = new BattleScreen("bob", pokemonDB.name[pokemon]);
+            b.Show();
+            this.Hide();
         }
 
         private void b1_Click(object sender, EventArgs e)
         {
-            BattleScreen b = new BattleScreen("bob", new Pokemon("Pikachu", 100, new Move("Quick Attack", 10), new Move("Volt Tackle", 20), new Move("Spark", 30), new Move("Thunder Shock", 40)));
-            b.Show();
-            this.Hide();
+            BattleScreen b = new BattleScreen("bob", pokemonDB.name[pokemon]);
+            //b.Show();
+            //this.Hide();
         }
 
         private void b2_Click(object sender, EventArgs e)
         {
-            BattleScreen b = new BattleScreen("jake", new Pokemon("Charmander", 100, new Move("Quick Attack", 10), new Move("Volt Tackle", 20), new Move("Spark", 30), new Move("Thunder Shock", 40)));
-            b.Show();
-            this.Hide();
+            BattleScreen b = new BattleScreen("jake", pokemonDB.Charmander);
+            //b.Show();
+            //this.Hide();
         }
 
         private void b3_Click(object sender, EventArgs e)
         {
-            BattleScreen b = new BattleScreen("nathan", new Pokemon("Bulbasaur", 100, new Move("Quick Attack", 10), new Move("Volt Tackle", 20), new Move("Spark", 30), new Move("Thunder Shock", 40)));
-            b.Show();
-            this.Hide();
+            BattleScreen b = new BattleScreen("nathan", pokemonDB.Bulbasaur);
+            //b.Show();
+            //this.Hide();
         }
 
         private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
         }

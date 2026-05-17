@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("robotfight")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c4f763f1ca76b2b84bde0fbe02e13cbd7fc90961")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d4aa86ed44b067f4b5cc9c52e09e1ea917793465")]
 [assembly: System.Reflection.AssemblyProductAttribute("robotfight")]
 [assembly: System.Reflection.AssemblyTitleAttribute("robotfight")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -42,6 +42,7 @@
             EnemyHealth = new Label();
             pictureBox4 = new PictureBox();
             InfoText = new Label();
+            playerBar = new ProgressBar();
             ((System.ComponentModel.ISupportInitialize)playerImage).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)EnemyImage).BeginInit();
@@ -136,7 +137,7 @@
             PlayerNameTag.AutoSize = true;
             PlayerNameTag.BackColor = Color.LightGray;
             PlayerNameTag.Font = new Font("Gadugi", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            PlayerNameTag.Location = new Point(494, 253);
+            PlayerNameTag.Location = new Point(495, 252);
             PlayerNameTag.Name = "PlayerNameTag";
             PlayerNameTag.Size = new Size(111, 33);
             PlayerNameTag.TabIndex = 11;
@@ -144,15 +145,19 @@
             // 
             // HealthPlayer
             // 
+            HealthPlayer.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             HealthPlayer.AutoSize = true;
             HealthPlayer.BackColor = Color.LightGray;
             HealthPlayer.BorderStyle = BorderStyle.FixedSingle;
             HealthPlayer.Font = new Font("Gadugi", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            HealthPlayer.Location = new Point(694, 251);
+            HealthPlayer.ImageAlign = ContentAlignment.MiddleRight;
+            HealthPlayer.Location = new Point(694, 241);
             HealthPlayer.Name = "HealthPlayer";
+            HealthPlayer.RightToLeft = RightToLeft.No;
             HealthPlayer.Size = new Size(94, 35);
             HealthPlayer.TabIndex = 10;
             HealthPlayer.Text = "100hp";
+            HealthPlayer.TextAlign = ContentAlignment.MiddleRight;
             // 
             // EnemyNameTag
             // 
@@ -197,17 +202,28 @@
             InfoText.TabIndex = 15;
             InfoText.Text = "A meowth has appeared to battle you!";
             // 
+            // playerBar
+            // 
+            playerBar.ForeColor = Color.FromArgb(128, 255, 128);
+            playerBar.Location = new Point(625, 279);
+            playerBar.Name = "playerBar";
+            playerBar.Size = new Size(163, 16);
+            playerBar.Step = 1;
+            playerBar.TabIndex = 16;
+            playerBar.Value = 100;
+            // 
             // BattleScreen
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(HealthPlayer);
+            Controls.Add(playerBar);
             Controls.Add(InfoText);
             Controls.Add(EnemyNameTag);
             Controls.Add(EnemyHealth);
             Controls.Add(pictureBox4);
             Controls.Add(PlayerNameTag);
-            Controls.Add(HealthPlayer);
             Controls.Add(pictureBox3);
             Controls.Add(EnemyImage);
             Controls.Add(Attack4);
@@ -249,5 +265,6 @@
         private Label EnemyHealth;
         private PictureBox pictureBox4;
         private Label InfoText;
+        private ProgressBar playerBar;
     }
 }

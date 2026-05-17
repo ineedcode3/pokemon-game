@@ -56,3 +56,12 @@ C:\projects\pokemon-game\robotfight\robotfight\obj\Debug\net8.0-windows\refint\r
 C:\projects\pokemon-game\robotfight\robotfight\obj\Debug\net8.0-windows\robotfight.pdb
 C:\projects\pokemon-game\robotfight\robotfight\obj\Debug\net8.0-windows\robotfight.genruntimeconfig.cache
 C:\projects\pokemon-game\robotfight\robotfight\obj\Debug\net8.0-windows\ref\robotfight.dll
+C:\projects\pokemon-game\robotfight\robotfight\bin\Debug\net8.0-windows\NAudio.dll
+C:\projects\pokemon-game\robotfight\robotfight\bin\Debug\net8.0-windows\NAudio.Asio.dll
+C:\projects\pokemon-game\robotfight\robotfight\bin\Debug\net8.0-windows\NAudio.Core.dll
+C:\projects\pokemon-game\robotfight\robotfight\bin\Debug\net8.0-windows\NAudio.Midi.dll
+C:\projects\pokemon-game\robotfight\robotfight\bin\Debug\net8.0-windows\NAudio.Wasapi.dll
+C:\projects\pokemon-game\robotfight\robotfight\bin\Debug\net8.0-windows\NAudio.WinForms.dll
+C:\projects\pokemon-game\robotfight\robotfight\bin\Debug\net8.0-windows\NAudio.WinMM.dll
+C:\projects\pokemon-game\robotfight\robotfight\obj\Debug\net8.0-windows\robotfight.csproj.AssemblyReference.cache
+C:\projects\pokemon-game\robotfight\robotfight\obj\Debug\net8.0-windows\robotfight.csproj.CopyComplete

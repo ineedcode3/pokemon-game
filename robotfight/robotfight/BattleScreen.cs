@@ -3,105 +3,137 @@ using System.Threading;
 using System.Media;
 using Microsoft.VisualBasic;
 using robotfight.Properties;
+using NAudio.Wave;
 
 namespace robotfight
 {
     public partial class BattleScreen : Form
     {
+        
         Random rand = new Random();
+        GameManager game;
+        public Boolean win;
         private int enemyHealth = 100;
         private String name;
         private Pokemon poke;
-        private SoundPlayer boom;
-        public Boolean playerTurn = true;
+        Sounds sound = new Sounds();
+        public int score;
         public BattleScreen(String Name, Pokemon poke)
         {
             InitializeComponent();
+            playerBar.Maximum = poke.getHealth();
+            game = new GameManager(poke);
             name = Name;
             this.poke = poke;
             PlayerNameTag.Text = poke.getName();
             updateHealth();
-            boom = new SoundPlayer(Resources.vineboom);
-            boom.Load();
-            InfoText.Text = "Hello Trainer " + name + ". Are you ready to battle? Choose your attack!";
-            if (poke.getName().Equals("Pikachu"))
+            playerBar.Value = playerBar.Maximum;
+            playerImage.Image = PokemonImageDatabase.Back[poke.getName()];
+            startText();
+            updateMoves();
+            updateEnemy();
+        }
+        public void updateEnemy()
+        {
+            EnemyNameTag.Text=game.getEnemyName();
+            EnemyImage.Image = PokemonImageDatabase.Front[game.getEnemyName()];
+        }
+        private async void startText()
+        {
+            await printSlow("Hello Trainer " + name + ". Are you ready to battle? Choose your attack!");
+        }
+        private async void button1_Click(object sender, EventArgs e)
+        {
+            if (game.getPlayerTurn())
             {
-                playerImage.Image = (Resources.pikachu);
-            }
-            if (poke.getName().Equals("Charmander"))
-            {
-                playerImage.Image = (Resources.charmander);
-            }
-            if (poke.getName().Equals("Bulbasaur"))
-            {
-                playerImage.Image = (Resources.bulbasaur);
+                game.playerAttack(1);
+                await printSlow("You used " + poke.m1.getName() + ". You dealt " + poke.m1.getDamage() + " damage.");
+                updateEnemyHealth();
             }
         }
+        private async void button2_Click(object sender, EventArgs e)
+        {
+            if (game.getPlayerTurn())
+            {
+                game.playerAttack(2);
+                await printSlow("You used " + poke.m2.getName() + ". You dealt " + poke.m2.getDamage() + " damage.");
+                updateEnemyHealth();
+            }
+        }
+        private async void button3_Click(object sender, EventArgs e)
+        {
+            if (game.getPlayerTurn())
+            {
+                game.playerAttack(3);
+                updateEnemyHealth();
+                await printSlow("You used " + poke.m3.getName()+". You dealt "+poke.m3.getDamage()+" damage.");                
+            }
+        }
+        private async void button4_Click(object sender, EventArgs e)
+        {
+            if (game.getPlayerTurn())
+            {
+                game.playerAttack(4);
+                await printSlow("You used " + poke.m4.getName() + ". You dealt " + poke.m4.getDamage() + " damage.");
+                updateEnemyHealth();
+            }
+        }
+        public void updateMoves()
+        {
+            Attack1.Text = poke.m1.getName() + " (" + poke.m1.getPP() + "/" + poke.m1.getMaxpp() + ")";
+            Attack2.Text = poke.m2.getName() + " (" + poke.m2.getPP() + "/" + poke.m2.getMaxpp() + ")";
+            Attack3.Text = poke.m3.getName() + " (" + poke.m3.getPP() + "/" + poke.m3.getMaxpp() + ")";
+            Attack4.Text = poke.m4.getName() + " (" + poke.m4.getPP() + "/" + poke.m4.getMaxpp() + ")";
+        }
+        public async void enemyTurn()
+        {
+            if(!game.getwin())
+            {
+                await Task.Delay(2000);
+                int move = rand.Next(1, 5);
+                switch (move)
+                {
+                    case 1:
+                        game.enemyAttack(20);
+                        enemyAttack(game.EnemyMoveName(1), 20);
+                        break;
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            if (playerTurn)
-            {
-                InfoText.Text = "You used " + poke.m1.getName();
-                enemyDamage(poke.m1.getDamage());
-                
-            }
-        }
-        private void button2_Click(object sender, EventArgs e)
-        {
-            if (playerTurn)
-            {
-                InfoText.Text = "You used " + poke.m2.getName();
-                enemyDamage(poke.m2.getDamage());
-            }
-        }
-        private void button3_Click(object sender, EventArgs e)
-        {
-            if (playerTurn)
-            {
-                InfoText.Text = "You used " + poke.m3.getName();
-                enemyDamage(poke.m3.getDamage());
-            }
-        }
+                    case 2:
+                        game.enemyAttack(25);
+                        enemyAttack(game.EnemyMoveName(2), 25);
+                        break;
 
-        private void button4_Click(object sender, EventArgs e)
-        {
-            if (playerTurn)
-            {
-                InfoText.Text = "You used " + poke.m4.getName();
-                enemyDamage(poke.m4.getDamage());
+                    case 3:
+                        game.enemyAttack(30);
+                        enemyAttack(game.EnemyMoveName(3), 30);
+                        break;
+
+                    case 4:
+                        game.enemyAttack(40);
+                        enemyAttack(game.EnemyMoveName(4), 40);
+                        break;
+                }
+                game.setPlayerTurn(true);
+                checkWin();
             }
         }
-        public void enemyTurn()
+        public async void enemyAttack(String attackname, int damage)
         {
-            Thread.Sleep(2000);
-            boom.Play();
-            int move = rand.Next(1, 5);
-            switch (move)
-            {
-                case 1:
-                    enemyAttack("Growl", 20);
-                    break;
-
-                case 2:
-                    enemyAttack("Scratch", 25);
-                    break;
-
-                case 3:
-                    enemyAttack("Bite", 30);
-                    break;
-
-                case 4:
-                    enemyAttack("Pounce", 40);
-                    break;
-            }
-        }
-        public void enemyAttack(String attackname, int damage)
-        {
-            poke.changeHealth(damage);
             updateHealth();
-            InfoText.Text = "The enemy meowth has used " + attackname + ". You took " + damage + " damage";
-            playerTurn = true;
+            sound.PlayVineBoom();
+            await printSlow("The enemy "+game.getEnemyName()+" has used " + attackname + ". You took " + damage + " damage");
+            updateHealth();
+        }
+        public void updateEnemyHealth()
+        {
+            EnemyHealth.Text = game.getEnemy() + "hp";
+            checkWin();
+            sound.PlayVineBoom();
+            if(!game.getwin())
+            {
+                enemyTurn();
+            }
+            updateMoves();
         }
         private void BattleScreen_FormClosing(object sender, FormClosingEventArgs e)
         {
@@ -109,33 +141,26 @@ namespace robotfight
         }
         public async void enemyDamage(int dmg)
         {
-            playerTurn = false;
-            boom.Play();
-            enemyHealth -= dmg;
-            if(enemyHealth < 0)
-            {
-                enemyHealth = 0;
-            }
-            EnemyHealth.Text = enemyHealth + "hp";
+            sound.PlayVineBoom();
+            updateHealth();
             await enemyAnim();
             checkWin();
-            enemyTurn();
         }
         public void checkWin()
         {
-            if(enemyHealth <=0)
-            {
-                boom.Stop();
+            if(game.checkWin()==0)
+            { 
                 Form1 form1 = new Form1(true);
                 form1.Show();
                 this.Hide();
+                win = true;
             }
-            if(poke.getHealth()<=0)
+            if(game.checkWin()==1)
             {
-                boom.Stop();
-                Form1 form1 = new Form1(true);
+                Form1 form1 = new Form1(false);
                 form1.Show();
                 this.Hide();
+                win = true;
             }
         }
         public async Task enemyAnim()
@@ -159,7 +184,29 @@ namespace robotfight
         }
         public void updateHealth()
         {
-            HealthPlayer.Text = poke.getHealth().ToString()+"hp";
+            HealthPlayer.Text = game.getPlayer()+"hp";
+            AnimateHealthBar();
+            Application.DoEvents();
         }
+        private async void AnimateHealthBar()
+        {
+            while (playerBar.Value > poke.getHealth())
+            {
+                playerBar.Value -= 1; // smaller step = smoother animation
+                await Task.Delay(10); // controls speed
+            }
+        }
+
+        public async Task printSlow(string toPrint)
+        {
+            InfoText.Text = "";
+            string[] words = toPrint.Split(' ');
+            for (int i = 0; i < words.Length; i++)
+            {
+                InfoText.Text += words[i] + " ";
+                await Task.Delay(50); // waits without freezing UI
+            }
+        }
+        
     }
 }

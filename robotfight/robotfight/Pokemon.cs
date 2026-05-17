@@ -20,6 +20,10 @@ namespace robotfight
             m3 = mo3;
             m4 = mo4;
         }
+        public void setHealth(int set)
+        {
+            health = set;
+        }
         public int getHealth() { return health; }
         public String getName() { return name; }
 
@@ -32,13 +36,23 @@ namespace robotfight
     {
         private String name;
         private int damage;
+        private int pp;
+        private int maxpp;
 
-        public Move(string name, int damage)
+        public Move(string name, int damage, int pp)
         {
             this.name = name;
             this.damage = damage;
+            this.pp = pp;
+            maxpp = pp;
         }
         public String getName() { return name; }
         public int getDamage() { return damage; }
+        public int getPP() { return pp; }
+        public int getMaxpp() { return maxpp;}
+        public void useMove()
+        {
+            pp--;
+        }
     }
 }

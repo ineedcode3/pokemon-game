@@ -40,6 +40,7 @@
             label1.Size = new Size(137, 20);
             label1.TabIndex = 0;
             label1.Text = "You Win! Continue?";
+            label1.Click += label1_Click;
             // 
             // button1
             // 

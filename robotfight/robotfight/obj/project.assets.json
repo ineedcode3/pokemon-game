@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\isaac\\OneDrive\\coding\\pokemon game\\robotfight\\robotfight\\robotfight.csproj",
+      "projectUniqueName": "C:\\projects\\pokemon-game\\robotfight\\robotfight\\robotfight.csproj",
       "projectName": "robotfight",
-      "projectPath": "C:\\Users\\isaac\\OneDrive\\coding\\pokemon game\\robotfight\\robotfight\\robotfight.csproj",
+      "projectPath": "C:\\projects\\pokemon-game\\robotfight\\robotfight\\robotfight.csproj",
       "packagesPath": "C:\\Users\\isaac\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\isaac\\OneDrive\\coding\\pokemon game\\robotfight\\robotfight\\obj\\",
+      "outputPath": "C:\\projects\\pokemon-game\\robotfight\\robotfight\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

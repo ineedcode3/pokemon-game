@@ -12,14 +12,29 @@ namespace robotfight
 {
     public partial class Form1 : Form
     {
-        public Form1()
+        private String winText = "Congratualations! You won!";
+        public Form1(Boolean Playerwin)
         {
             InitializeComponent();
+            if (Playerwin)
+            {
+                label1.Text = winText;
+            }
+            else
+            {
+                label1.Text = "Oof you lost to a computer. You are trash";
+            }
+         
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

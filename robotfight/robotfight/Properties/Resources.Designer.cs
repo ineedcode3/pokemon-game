@@ -63,9 +63,9 @@ namespace robotfight.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap meowth_removebg_preview {
+        internal static System.Drawing.Bitmap bulbasaur {
             get {
-                object obj = ResourceManager.GetObject("meowth-removebg-preview", resourceCulture);
+                object obj = ResourceManager.GetObject("bulbasaur", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -73,9 +73,29 @@ namespace robotfight.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap pikcachu {
+        internal static System.Drawing.Bitmap charmander {
             get {
-                object obj = ResourceManager.GetObject("pikcachu", resourceCulture);
+                object obj = ResourceManager.GetObject("charmander", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap meowth {
+            get {
+                object obj = ResourceManager.GetObject("meowth", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pikachu {
+            get {
+                object obj = ResourceManager.GetObject("pikachu", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

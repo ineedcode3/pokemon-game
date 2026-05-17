@@ -25,5 +25,26 @@ namespace robotfight
             b2.Visible = true;
             b3.Visible = true;
         }
+
+        private void b1_Click(object sender, EventArgs e)
+        {
+            BattleScreen b = new BattleScreen("bob", new Pokemon("Pikachu", 200, new Move("Quick Attack", 10), new Move("Volt Tackle", 20), new Move("Spark", 30), new Move("Thunder Shock",40)));
+            b.Show();
+            this.Hide();
+        }
+
+        private void b2_Click(object sender, EventArgs e)
+        {
+            BattleScreen b = new BattleScreen("jake", new Pokemon("Charmander", 200, new Move("Quick Attack", 10), new Move("Volt Tackle", 20), new Move("Spark", 30), new Move("Thunder Shock", 40)));
+            b.Show();
+            this.Hide();
+        }
+
+        private void b3_Click(object sender, EventArgs e)
+        {
+            BattleScreen b = new BattleScreen("nathan", new Pokemon("Bulbasaur", 200, new Move("Quick Attack", 10), new Move("Volt Tackle", 20), new Move("Spark", 30), new Move("Thunder Shock", 40)));
+            b.Show();
+            this.Hide();
+        }
     }
 }

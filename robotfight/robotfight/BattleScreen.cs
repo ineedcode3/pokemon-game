@@ -8,10 +8,9 @@ namespace robotfight
 {
     public partial class BattleScreen : Form
     {
-        private int playerHealth = 100;
+        Random rand = new Random();
         private int enemyHealth = 100;
         private String name;
-        private String pokemon;
         private Pokemon poke;
         private SoundPlayer boom;
         public Boolean playerTurn = true;
@@ -20,10 +19,23 @@ namespace robotfight
             InitializeComponent();
             name = Name;
             this.poke = poke;
-            pokemon = poke.getName();
+            PlayerNameTag.Text = poke.getName();
             updateHealth();
             boom = new SoundPlayer(Resources.vineboom);
-            InfoText.Text = "Are you ready to battle? Choose your attack!";
+            boom.Load();
+            InfoText.Text = "Hello Trainer " + name + ". Are you ready to battle? Choose your attack!";
+            if (poke.getName().Equals("Pikachu"))
+            {
+                playerImage.Image = (Resources.pikachu);
+            }
+            if (poke.getName().Equals("Charmander"))
+            {
+                playerImage.Image = (Resources.charmander);
+            }
+            if (poke.getName().Equals("Bulbasaur"))
+            {
+                playerImage.Image = (Resources.bulbasaur);
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -60,7 +72,37 @@ namespace robotfight
                 enemyDamage(poke.m4.getDamage());
             }
         }
+        public void enemyTurn()
+        {
+            Thread.Sleep(2000);
+            boom.Play();
+            int move = rand.Next(1, 5);
+            switch (move)
+            {
+                case 1:
+                    enemyAttack("Growl", 20);
+                    break;
 
+                case 2:
+                    enemyAttack("Scratch", 25);
+                    break;
+
+                case 3:
+                    enemyAttack("Bite", 30);
+                    break;
+
+                case 4:
+                    enemyAttack("Pounce", 40);
+                    break;
+            }
+        }
+        public void enemyAttack(String attackname, int damage)
+        {
+            poke.changeHealth(damage);
+            updateHealth();
+            InfoText.Text = "The enemy meowth has used " + attackname + ". You took " + damage + " damage";
+            playerTurn = true;
+        }
         private void BattleScreen_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
@@ -68,22 +110,30 @@ namespace robotfight
         public async void enemyDamage(int dmg)
         {
             playerTurn = false;
+            boom.Play();
             enemyHealth -= dmg;
             if(enemyHealth < 0)
             {
                 enemyHealth = 0;
             }
             EnemyHealth.Text = enemyHealth + "hp";
-            boom.Play();
             await enemyAnim();
-            playerTurn = true;
             checkWin();
+            enemyTurn();
         }
         public void checkWin()
         {
-            if(enemyHealth <=0||playerHealth <=0)
+            if(enemyHealth <=0)
             {
-                Form1 form1 = new Form1();
+                boom.Stop();
+                Form1 form1 = new Form1(true);
+                form1.Show();
+                this.Hide();
+            }
+            if(poke.getHealth()<=0)
+            {
+                boom.Stop();
+                Form1 form1 = new Form1(true);
                 form1.Show();
                 this.Hide();
             }
@@ -91,25 +141,25 @@ namespace robotfight
         public async Task enemyAnim()
         {
             EnemyImage.Location = new Point(EnemyImage.Location.X + 10, EnemyImage.Location.Y - 10);
-            await Task.Delay(50);
+            await Task.Delay(100);
             EnemyImage.Location = new Point(EnemyImage.Location.X - 10, EnemyImage.Location.Y + 10);
-            await Task.Delay(50);
+            await Task.Delay(100);
             EnemyImage.Location = new Point(EnemyImage.Location.X + 10, EnemyImage.Location.Y - 10);
-            await Task.Delay(50);
+            await Task.Delay(100);
             EnemyImage.Location = new Point(EnemyImage.Location.X - 10, EnemyImage.Location.Y + 10);
-            await Task.Delay(50);
+            await Task.Delay(100);
             EnemyImage.Location = new Point(EnemyImage.Location.X + 10, EnemyImage.Location.Y - 10);
-            await Task.Delay(50);
+            await Task.Delay(100);
             EnemyImage.Location = new Point(EnemyImage.Location.X - 10, EnemyImage.Location.Y + 10);
-            await Task.Delay(50);
+            await Task.Delay(100);
             EnemyImage.Location = new Point(EnemyImage.Location.X + 10, EnemyImage.Location.Y - 10);
-            await Task.Delay(50);
+            await Task.Delay(100);
             EnemyImage.Location = new Point(EnemyImage.Location.X - 10, EnemyImage.Location.Y + 10);
-            await Task.Delay(50);
+            await Task.Delay(100);
         }
         public void updateHealth()
         {
-            HealthPlayer.Text = poke.getHealth().ToString();
+            HealthPlayer.Text = poke.getHealth().ToString()+"hp";
         }
     }
 }

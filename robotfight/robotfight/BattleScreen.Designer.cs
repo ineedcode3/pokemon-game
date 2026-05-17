@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            pictureBox1 = new PictureBox();
+            playerImage = new PictureBox();
             Attack1 = new Button();
             Attack2 = new Button();
             Attack3 = new Button();
@@ -42,23 +42,23 @@
             EnemyHealth = new Label();
             pictureBox4 = new PictureBox();
             InfoText = new Label();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)playerImage).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)EnemyImage).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             SuspendLayout();
             // 
-            // pictureBox1
+            // playerImage
             // 
-            pictureBox1.BackColor = Color.Transparent;
-            pictureBox1.Image = Properties.Resources.pikcachu;
-            pictureBox1.Location = new Point(47, 93);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(322, 304);
-            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox1.TabIndex = 0;
-            pictureBox1.TabStop = false;
+            playerImage.BackColor = Color.Transparent;
+            playerImage.Image = Properties.Resources.pikachu;
+            playerImage.Location = new Point(47, 93);
+            playerImage.Name = "playerImage";
+            playerImage.Size = new Size(322, 304);
+            playerImage.SizeMode = PictureBoxSizeMode.StretchImage;
+            playerImage.TabIndex = 0;
+            playerImage.TabStop = false;
             // 
             // Attack1
             // 
@@ -113,7 +113,7 @@
             // EnemyImage
             // 
             EnemyImage.BackgroundImageLayout = ImageLayout.None;
-            EnemyImage.Image = Properties.Resources.meowth_removebg_preview;
+            EnemyImage.Image = Properties.Resources.meowth;
             EnemyImage.Location = new Point(508, 60);
             EnemyImage.Name = "EnemyImage";
             EnemyImage.Size = new Size(154, 151);
@@ -215,7 +215,7 @@
             Controls.Add(Attack2);
             Controls.Add(Attack1);
             Controls.Add(pictureBox2);
-            Controls.Add(pictureBox1);
+            Controls.Add(playerImage);
             MaximizeBox = false;
             MaximumSize = new Size(818, 497);
             MinimizeBox = false;
@@ -224,7 +224,7 @@
             StartPosition = FormStartPosition.CenterScreen;
             Text = "PokemonBattles";
             FormClosing += BattleScreen_FormClosing;
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)playerImage).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)EnemyImage).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
@@ -235,7 +235,7 @@
 
         #endregion
 
-        private PictureBox pictureBox1;
+        private PictureBox playerImage;
         private Button Attack1;
         private Button Attack2;
         private Button Attack3;

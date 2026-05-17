@@ -65,6 +65,7 @@
             b1.Text = "Pikachu";
             b1.UseVisualStyleBackColor = true;
             b1.Visible = false;
+            b1.Click += b1_Click;
             // 
             // b2
             // 
@@ -75,6 +76,7 @@
             b2.Text = "Charmander";
             b2.UseVisualStyleBackColor = true;
             b2.Visible = false;
+            b2.Click += b2_Click;
             // 
             // b3
             // 
@@ -85,6 +87,7 @@
             b3.Text = "Bulbasaur";
             b3.UseVisualStyleBackColor = true;
             b3.Visible = false;
+            b3.Click += b3_Click;
             // 
             // l1
             // 
